@@ -3,6 +3,7 @@ PROJECTS="libc kernel"
 
 export MAKE=${MAKE:-make}
 export HOST=${HOST:-$(./default-host.sh)}
+export HOSTARCH=$(../target-triplet-to-arch.sh ${HOST})
 
 export AR=${HOST}-ar
 export AS=${HOST}-as
